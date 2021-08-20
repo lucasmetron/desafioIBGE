@@ -32,7 +32,7 @@ function App() {
       <Provider store={store}>
         <Header />
         <Estados />
-        <GlobalStyle />
+        {/* <GlobalStyle /> */}
       </Provider>
 
     </div>
