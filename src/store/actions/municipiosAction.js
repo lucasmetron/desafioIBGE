@@ -1,0 +1,1 @@
+export const addMunicipios = (value) => { return { type: 'ADDMUNICIPIO', payload: value || '' } }
