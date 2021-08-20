@@ -22,7 +22,7 @@ export default function Municipos(props) {
     const columns = [
 
         { field: 'muni', headerName: 'Município', width: 250 },
-        { field: 'microRegion', headerName: 'Micro Região', width: 250 },
+        { field: 'microRegion', headerName: 'Microrregião', width: 250 },
         { field: 'uf', headerName: 'UF', width: 250 },
     ];
 
@@ -37,7 +37,7 @@ export default function Municipos(props) {
 
     useEffect(() => {
         getMunicipios();
-    }, [])
+    }, [ufSelecionadaRedux])
 
     useEffect(() => {
         dispatch(addMunicipios(allMunicipios))
@@ -55,7 +55,7 @@ export default function Municipos(props) {
     }, [selectedMunicipios])
 
     async function getMunicipios() {
-        setAllMunicipios(await ApiService.get('estados/GO/municipios'))
+        setAllMunicipios(await ApiService.get(`estados/${ufSelecionadaRedux}/municipios`))
     }
 
     function municipioSelected(event) {
@@ -63,29 +63,39 @@ export default function Municipos(props) {
     }
 
     return (
-        <Container style={{ display: ufSelecionadaRedux == undefined ? 'none' : 'flex' }}>
+        <>
+            {ufSelecionadaRedux == '' ?
 
-            <SelectCSS name='Municipios' id='Municipios' onChange={municipioSelected}>
+                ''
+                :
+                <Container>
 
-                <option selected>Escolha o Município</option>
+                    <SelectCSS name='Municipios' id='Municipios' onChange={municipioSelected}>
 
-                {allMunicipios.length != 0 ?
+                        <option selected>Escolha o Município</option>
 
-                    allMunicipios.map((state) => {
-                        return <option key={state.id} value={state.nome} >{state.nome}</option>
-                    })
+                        {allMunicipios.length != 0 ?
 
-                    :
+                            allMunicipios.map((state) => {
+                                return <option key={state.id} value={state.nome} >{state.nome}</option>
+                            })
 
-                    ''
-                }
-            </SelectCSS>
+                            :
 
-            <Table>
-                <DataGrid autoHeight rows={rows} columns={columns} pageSize={5} />
-            </Table>
+                            ''
+                        }
+                    </SelectCSS>
 
-        </Container>
+                    <Table>
+                        <DataGrid autoHeight rows={rows} columns={columns} pageSize={5} />
+                    </Table>
+
+                </Container>
+            }
+
+        </>
+
+
 
     );
 }
