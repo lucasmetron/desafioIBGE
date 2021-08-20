@@ -1,5 +1,4 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles';
 import {
     Container,
     Data,
@@ -8,13 +7,6 @@ import {
 } from './styled'
 import BrazilFlag from '../../assets/BrazilFlag.png';
 
-const useStyle = makeStyles(() => ({
-    router: {
-        color: '#7758CE',
-        fontSize: 60,
-    }
-
-}))
 
 function getDate() {
     let date = new Date();
@@ -46,9 +38,6 @@ function getDate() {
 
 
 export default function Header(props) {
-
-    const classesIcon = useStyle();
-
 
     return (
         <Container>

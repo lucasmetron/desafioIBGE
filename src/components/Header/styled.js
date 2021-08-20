@@ -11,7 +11,8 @@ export const Container = styled.div`
     padding-right: 2rem;
     gap: 0.2rem;
     border-bottom: 1px solid #99989b34 ;
-
+    -webkit-box-shadow: 0px 7px 14px -6px rgba(0,0,0,0.53); 
+    box-shadow: 0px 7px 14px -6px rgba(0,0,0,0.53);
 
     p{
         font-size: 1.5rem;
