@@ -1,1 +1,1 @@
-export const addMunicipios = (value) => { return { type: 'ADDUF', payload: value || '' } }
+export const addUF = (value) => { return { type: 'ADDUF', payload: value || '' } }

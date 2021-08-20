@@ -4,10 +4,11 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { ApiService } from '../../service/ApiService';
 import { addEstados } from '../../store/actions/estadosAction'
+import { addUF } from '../../store/actions/ufAction'
 import {
-    ContainerEstados,
+    Container,
     SelectCSS,
-    StatesTable,
+    Table,
 } from './styled'
 import { DataGrid } from '@material-ui/data-grid';
 
@@ -36,7 +37,6 @@ export default function Estados(props) {
         }
     })
 
-    console.log(rows)
 
     useEffect(() => {
         getEstados();
@@ -44,21 +44,24 @@ export default function Estados(props) {
 
     useEffect(() => {
         dispatch(addEstados(allStates))
-        console.log(redux)
+        // console.log(redux)
     }, [allStates, redux])
 
+    useEffect(() => {
+        dispatch(addUF(selectedState))
+        // console.log(redux)
+    }, [selectedState])
 
     async function getEstados() {
         setAllStates(await ApiService.get('estados'))
     }
 
     function stateSelected(event) {
-
-        console.log(event.target.value)
+        setSelectedState(event.target.value)
     }
 
     return (
-        <ContainerEstados>
+        <Container>
 
             <SelectCSS autoFocus name='estados' id='estados' onChange={stateSelected}>
 
@@ -76,10 +79,10 @@ export default function Estados(props) {
                 }
             </SelectCSS>
 
-            <StatesTable>
-                <DataGrid autoHeight rows={rows} columns={columns} pageSize={5} style={{ fontSize: '20px' }} />
-            </StatesTable>
+            <Table>
+                <DataGrid autoHeight rows={rows} columns={columns} pageSize={5} />
+            </Table>
 
-        </ContainerEstados>
+        </Container>
     );
 }

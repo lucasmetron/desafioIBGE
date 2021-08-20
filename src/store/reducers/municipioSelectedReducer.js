@@ -1,6 +1,6 @@
-export default function ufReducer(state = [], action) {
+export default function municipioSelectedReducer(state = '', action) {
     switch (action.type) {
-        case 'ADDUF':
+        case 'ADDMUNICIPIOSELECIONADO':
             return state = action.payload;
 
         default:

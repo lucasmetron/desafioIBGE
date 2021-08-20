@@ -1,29 +1,25 @@
 import './App.css';
 import Header from './components/Header/Header';
-import { createGlobalStyle } from 'styled-components'
 import Estados from './components/Estados/Estados';
+import Municipios from './components/Municipios/Municipios';
 import { createStore, combineReducers } from 'redux';
-import { Provider } from 'react-redux';
+import { Provider, useSelector } from 'react-redux';
 import estadosReducer from './store/reducers/estadosReducer';
-import ufReducer from './store/reducers/ufReducer';
+import ufSelectedReducer from './store/reducers/ufSelectedReducer';
 import municipiosReducer from './store/reducers/municipiosReducer';
-
-const GlobalStyle = createGlobalStyle`
-  *{
-    margin: 0;
-    padding: 0;
-    font-size: 10px;
-  }
-`;
+import municipioSelectedReducer from './store/reducers/municipioSelectedReducer';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 
 function App() {
   const allReducers = combineReducers({
     estados: estadosReducer,
-    UF: ufReducer,
     municipios: municipiosReducer,
-  })
+    ufSelecionada: ufSelectedReducer,
+    municipioSelecionado: municipioSelectedReducer,
 
+  })
   const store = createStore(allReducers);
 
   return (
@@ -32,7 +28,8 @@ function App() {
       <Provider store={store}>
         <Header />
         <Estados />
-        {/* <GlobalStyle /> */}
+        <Municipios />
+
       </Provider>
 
     </div>
