@@ -53,7 +53,7 @@ export default function Estados(props) {
     }, [selectedState])
 
     async function getEstados() {
-        setAllStates(await ApiService.get('estados'))
+        setAllStates(await ApiService.get('estados?orderBy=nome'))
     }
 
     function stateSelected(event) {
