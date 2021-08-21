@@ -71,8 +71,6 @@ export default function Municipos(props) {
 
                     <SelectCSS name='Municipios' id='Municipios' onChange={municipioSelected}>
 
-                        <option selected>Escolha o Município</option>
-
                         {allMunicipios.length != 0 ?
 
                             allMunicipios.map((state) => {

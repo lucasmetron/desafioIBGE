@@ -20,7 +20,7 @@
 
 
 ### Demonstração da aplicação
-![Tela inicial](./src/assets/lucasDeezer.gif)
+![Tela inicial](./src/assets/ibge.gif)
 
 
 ### Como visualizar aplicação em sua máquina:

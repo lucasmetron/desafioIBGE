@@ -66,8 +66,6 @@ export default function Estados(props) {
 
             <SelectCSS autoFocus name='estados' id='estados' onChange={stateSelected}>
 
-                <option selected>Escolha um estado</option>
-
                 {allStates.length != 0 ?
 
                     allStates.map((state) => {
