@@ -1,15 +1,12 @@
-import './App.css';
 import Header from './components/Header/Header';
 import Estados from './components/Estados/Estados';
 import Municipios from './components/Municipios/Municipios';
 import { createStore, combineReducers } from 'redux';
-import { Provider, useSelector } from 'react-redux';
+import { Provider } from 'react-redux';
 import estadosReducer from './store/reducers/estadosReducer';
 import ufSelectedReducer from './store/reducers/ufSelectedReducer';
 import municipiosReducer from './store/reducers/municipiosReducer';
 import municipioSelectedReducer from './store/reducers/municipioSelectedReducer';
-import { useState } from 'react';
-import { useEffect } from 'react';
 import MunicipioFinal from './components/MunicipioFinal/MunicipioFinal';
 
 
