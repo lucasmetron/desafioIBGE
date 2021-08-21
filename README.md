@@ -20,7 +20,7 @@
 
 
 ### Demonstração da aplicação
-![Tela inicial](./src/assets/ibge.gif)
+![Tela inicial](./src/assets/demo.gif)
 
 
 ### Como visualizar aplicação em sua máquina:
