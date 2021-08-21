@@ -50,7 +50,12 @@ export default function Municipos(props) {
     }, [redux.ufSelecionada])
 
     useEffect(() => {
-        dispatch(selectedMunicipio(selectedMunicipios))
+        if (selectedMunicipios == 'vazio') {
+            alert('Escolha um município!')
+        } else {
+            dispatch(selectedMunicipio(selectedMunicipios))
+        }
+
     }, [selectedMunicipios])
 
     async function getMunicipios() {
@@ -70,6 +75,8 @@ export default function Municipos(props) {
                 <Container>
 
                     <SelectCSS name='Municipios' id='Municipios' onChange={municipioSelected}>
+
+                        <option value="vazio">Escolha o município</option>
 
                         {allMunicipios.length != 0 ?
 

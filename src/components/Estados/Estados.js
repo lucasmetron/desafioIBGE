@@ -50,7 +50,12 @@ export default function Estados(props) {
     }, [allStates, redux])
 
     useEffect(() => {
-        dispatch(addUF(selectedState))
+        if (selectedState == 'vazio') {
+            alert("Escolha um estado!")
+        } else {
+            dispatch(addUF(selectedState))
+        }
+
     }, [selectedState])
 
     async function getEstados() {
@@ -65,6 +70,8 @@ export default function Estados(props) {
         <Container>
 
             <SelectCSS autoFocus name='estados' id='estados' onChange={stateSelected}>
+
+                <option value="vazio">Escolha o estado</option>
 
                 {allStates.length != 0 ?
 
