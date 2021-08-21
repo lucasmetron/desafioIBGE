@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+<div align="center">
+  <img src="./src/assets/ibge.jpg" alt="Podcastr logo" style='width: 50px'>
+  
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### - Fui desafiado a fazer uma aplicação que faz requisição à API do IBGE e retorna a lista de estados, municípios e etc.
+### - No projeto tive que praticar bastante o Redux, pois foi um requisito do desafio. Os quatro objetos usados no Redux foram:
+#### *estados : Onde armazena todos os estados do Brasil mais o Distrito Federal.
+#### *municipioSelecionado: Armazena o código do município selecionado.
+#### *municipios: Onde armazena todos os municipíos do estado que foi selecionado.
+#### *ufSelecionada: Armazena a Unidade Federativa selecionada.
 
-## Available Scripts
+### Fiquei muito satisfeito em fazer este projeto, pois sei que ele me fez crescer profissionalmente :D
+### - Nesta aplicação foram usados as seguintes tecnologias:
 
-In the project directory, you can run:
+#### *React JS
+#### *Redux
+#### *Styled Component
+#### *Material UI
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Demonstração da aplicação
+![Tela inicial](./src/assets/lucasDeezer.gif)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+### Como visualizar aplicação em sua máquina:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### 1º Passo: Instale o git, veja o passo a passo em https://git-scm.com/downloads
+#### 2º Passo: Instale o node, veja o passo a passo em https://nodejs.org/en/download/
+#### 3º Passo: Abra o terminal como administrador e execute o comando: ' git clone https://github.com/lucasmetron/desafioIBGE.git '
+#### 4º Passo: Digite o comando ' cd desafioIBGE ' para acessar a pasta do projeto
+#### 5º Passo: Digite o comando ' npm install ' e ao finalizar digite o comando ' npm start '
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Gostou do meu projeto!? :D Entre em contato comigo! 
+[Linkedin](https://www.linkedin.com/in/lucas-rosa-058683102/) <br/>
+[Email: lucasmetron@gmail.com](mailto:lucasmetron@gmail.com)
