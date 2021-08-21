@@ -1,4 +1,4 @@
-export default function ufReducer(state = "", action) {
+export default function ufReducer(state = '', action) {
     switch (action.type) {
         case 'ADDUF':
             return state = action.payload;

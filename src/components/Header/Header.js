@@ -6,7 +6,10 @@ import {
 
 } from './styled'
 import BrazilFlag from '../../assets/BrazilFlag.png';
-
+import { useSelector } from 'react-redux';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { ApiService } from '../../service/ApiService';
 
 function getDate() {
     let date = new Date();
@@ -39,13 +42,13 @@ function getDate() {
 
 export default function Header(props) {
 
+
     return (
         <Container>
             <Logo>
                 <img src={BrazilFlag} alt="Bandeir do Brasil" />
                 <h2>IBGE - By Lucas Rosa</h2>
             </Logo>
-
 
 
             <Data>

@@ -37,6 +37,9 @@ export default function Estados(props) {
         }
     })
 
+    useEffect(() => {
+        console.log(redux)
+    }, [redux])
 
     useEffect(() => {
         getEstados();
@@ -44,12 +47,10 @@ export default function Estados(props) {
 
     useEffect(() => {
         dispatch(addEstados(allStates))
-        console.log(redux)
     }, [allStates, redux])
 
     useEffect(() => {
         dispatch(addUF(selectedState))
-        // console.log(redux)
     }, [selectedState])
 
     async function getEstados() {
@@ -70,7 +71,7 @@ export default function Estados(props) {
                 {allStates.length != 0 ?
 
                     allStates.map((state) => {
-                        return <option onClick={() => { console.log('teste') }} key={state.id} value={state.sigla} >{state.nome}</option>
+                        return <option key={state.id} value={state.sigla} >{state.nome}</option>
                     })
 
                     :

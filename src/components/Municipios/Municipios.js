@@ -35,6 +35,8 @@ export default function Municipos(props) {
         }
     })
 
+
+
     useEffect(() => {
         getMunicipios();
     }, [ufSelecionadaRedux])
@@ -45,9 +47,6 @@ export default function Municipos(props) {
 
     useEffect(() => {
         setUfSelecionadaRedux(redux.ufSelecionada)
-        console.log(ufSelecionadaRedux)
-        console.log(ufSelecionadaRedux == '')
-        console.log(redux)
     }, [redux.ufSelecionada])
 
     useEffect(() => {
