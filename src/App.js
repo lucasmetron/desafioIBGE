@@ -10,6 +10,7 @@ import municipiosReducer from './store/reducers/municipiosReducer';
 import municipioSelectedReducer from './store/reducers/municipioSelectedReducer';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import MunicipioFinal from './components/MunicipioFinal/MunicipioFinal';
 
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
         <Header />
         <Estados />
         <Municipios />
-
+        <MunicipioFinal />
       </Provider>
 
     </div>
