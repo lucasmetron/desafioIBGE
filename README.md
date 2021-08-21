@@ -5,9 +5,9 @@
 
 ### - Fui desafiado a fazer uma aplicação que faz requisição à API do IBGE e retorna a lista de estados, municípios e etc.
 ### - No projeto tive que praticar bastante o Redux, pois foi um requisito do desafio. Os quatro objetos usados no Redux foram:
-#### *estados : Onde armazena todos os estados do Brasil mais o Distrito Federal.
+#### *estados : Que armazena todos os estados do Brasil e o Distrito Federal.
 #### *municipioSelecionado: Armazena o código do município selecionado.
-#### *municipios: Onde armazena todos os municipíos do estado que foi selecionado.
+#### *municipios: Que armazena todos os municipíos do estado selecionado.
 #### *ufSelecionada: Armazena a Unidade Federativa selecionada.
 
 ### Fiquei muito satisfeito em fazer este projeto, pois sei que ele me fez crescer profissionalmente :D
