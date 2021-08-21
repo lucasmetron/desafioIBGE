@@ -44,7 +44,7 @@ export default function Estados(props) {
 
     useEffect(() => {
         dispatch(addEstados(allStates))
-        // console.log(redux)
+        console.log(redux)
     }, [allStates, redux])
 
     useEffect(() => {

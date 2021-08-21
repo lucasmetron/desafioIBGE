@@ -77,7 +77,7 @@ export default function Municipos(props) {
                         {allMunicipios.length != 0 ?
 
                             allMunicipios.map((state) => {
-                                return <option key={state.id} value={state.nome} >{state.nome}</option>
+                                return <option key={state.id} value={state.id} >{state.nome}</option>
                             })
 
                             :
